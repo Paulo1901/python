@@ -9,13 +9,16 @@
 # Também existe o tipo None que é
 # usado para representar um não valor
 
-entrada = input('[E]entrar [S]sair: ')
-senha_digitada = input('Senha: ')
+# entrada = input('[E]entrar [S]sair: ')
+# senha_digitada = input('Senha: ')
 
-senha_permituda = '123456'
-# 'and' as duas condições precisa ser verdadeira
-if entrada == 'E' and senha_digitada == senha_permituda:
-    print('Usuário entrou no sistema.')
-else:
-    print('Usuário saiu do sistema.')
+# senha_permituda = '123456'
+# # 'and' as duas condições precisa ser verdadeira
+# if entrada == 'E' and senha_digitada == senha_permituda:
+#     print('Usuário entrou no sistema.')
+# else:
+#     print('Usuário saiu do sistema.')
 
+# Avaliação de curto circuito
+print(True and False and True)
+print(True and 0 and True)
