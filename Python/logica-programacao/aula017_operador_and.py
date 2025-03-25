@@ -1,8 +1,8 @@
 # Operadores lógicos 
 # and (e) or (ou) not (não)
-# and - Todas as condições precisam ser 
-# verdeiras.
-# Se qualquer valor for considerando falso,
+# or - Qual quer condição verdadeira avalia
+# toda expressão como verdadeira.
+# Se qualquer valor for considerando verdadeiro,
 # expressão inteira será avaliada naquele valor 
 # são considerados falsy (que você ja viu)
 # 0 0.0 '' False
@@ -13,12 +13,13 @@
 # senha_digitada = input('Senha: ')
 
 # senha_permituda = '123456'
-# # 'and' as duas condições precisa ser verdadeira
-# if entrada == 'E' and senha_digitada == senha_permituda:
+
+# if (entrada == 'E' or entrada == 'e') and senha_digitada == senha_permituda:
 #     print('Usuário entrou no sistema.')
 # else:
 #     print('Usuário saiu do sistema.')
 
 # Avaliação de curto circuito
-print(True and False and True)
-print(True and 0 and True)
+
+senha = input('Senha: ') or 'Sen senha'
+print(senha)
