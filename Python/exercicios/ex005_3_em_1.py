@@ -23,7 +23,7 @@ entrada_hora = input('Que horas são? ')
 
 entrada_hora_int = int(entrada_hora)
 
-if entrada_hora_int <= 11:
+if entrada_hora_int >= 0 and entrada_hora <= 11:
     print('Bom dia.')
 elif entrada_hora_int >= 12 and entrada_hora_int <= 17:
     print('Boa tarde')
