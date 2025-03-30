@@ -23,7 +23,7 @@ entrada_hora = input('Que horas são? ')
 
 entrada_hora_int = int(entrada_hora)
 
-if entrada_hora_int >= 0 and entrada_hora <= 11:
+if entrada_hora_int >= 0 and entrada_hora_int <= 11:
     print('Bom dia.')
 elif entrada_hora_int >= 12 and entrada_hora_int <= 17:
     print('Boa tarde')
@@ -38,3 +38,15 @@ escreva "Seu nome é curto" se tiver 5 e 6 letras, esvreva
 "Seu nome é normal"; maior que 6 escreva "Seu nome é grande"
 """
 
+nome = input('Digite seu nome: ')
+tamanho_nome = len(nome)
+
+if tamanho_nome > 1:
+    if tamanho_nome <= 4:
+        print('Seu nome é curto.')     
+    elif tamanho_nome >= 5 and tamanho_nome <= 6:
+        print('Seu nome é normal.')
+    else:
+        print('Seu nome é grande.')
+else:
+    print('Digite mais de uma letra.')
