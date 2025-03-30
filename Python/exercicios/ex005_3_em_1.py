@@ -19,15 +19,15 @@ Faça um programa que pergunte a hora ao usuário e, baseando-se no horario
 descrito, exiba a saudação apropriada ex:
 Bom dia 0-11, boa tarde 12-17 e boa noite 18-23
 """
-saudacao = input('Que horas são? ')
+entrada_hora = input('Que horas são? ')
 
-saudacao_int = int(saudacao)
+entrada_hora_int = int(entrada_hora)
 
-if saudacao_int <= 11:
+if entrada_hora_int <= 11:
     print('Bom dia.')
-elif saudacao_int >= 12 and saudacao_int <= 17:
+elif entrada_hora_int >= 12 and entrada_hora_int <= 17:
     print('Boa tarde')
-elif saudacao_int >= 18 and saudacao_int <= 23:
+elif entrada_hora_int >= 18 and entrada_hora_int <= 23:
     print('Boa noite')
 else:
     print('Por favor digite uma hora valida.')
@@ -37,3 +37,4 @@ Faça um programa que peça o primeiro nome do usuário, se o nome tiver 4 letra
 escreva "Seu nome é curto" se tiver 5 e 6 letras, esvreva
 "Seu nome é normal"; maior que 6 escreva "Seu nome é grande"
 """
+
