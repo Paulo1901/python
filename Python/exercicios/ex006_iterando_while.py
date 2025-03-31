@@ -22,5 +22,3 @@ while indice_2 < len(nome2):
 print(novo_nome_2, end='')
 print()
 print(novo_nme, end='')
-
-
