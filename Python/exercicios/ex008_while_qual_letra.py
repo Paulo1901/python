@@ -8,7 +8,7 @@ frase =  'o Python é uma linguagem de programação '\
 i = 0
 while i < len(frase):
     letra_atual = frase[i]
+    qtd_vezes_letra_apareceu = frase.count(letra_atual)
 
-    print(letra_atual)
+    print(letra_atual, qtd_vezes_letra_apareceu)
     i += 1
-
