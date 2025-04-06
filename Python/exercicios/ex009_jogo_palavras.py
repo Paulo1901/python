@@ -58,3 +58,4 @@ while True:
         print(f'Você Tentou: {numeros_tentativas}x')
         letras_acertadas = ''
         numeros_tentativas = 0 
+        
