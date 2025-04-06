@@ -13,6 +13,7 @@ em palavra secreta.
     na palavra secreta; exbiba *.
 Faça a contagem de tentativas do seu usuário
 """
+import os
 
 # Palavra que usuário precisda adivinhar '???'
 palavra_secreta = 'perfume'
@@ -51,9 +52,9 @@ while True:
     print(f'Palavra formada: {palavra_formada}')
     
     if palavra_formada == palavra_secreta:
+        os.system('clear')
         print('VOCÊ GANHOU! PARABÉMS!')
         print(f'A palvra era: {palavra_secreta}')
         print(f'Você Tentou: {numeros_tentativas}x')
         letras_acertadas = ''
         numeros_tentativas = 0 
-        
