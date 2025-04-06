@@ -18,16 +18,18 @@ Faça a contagem de tentativas do seu usuário
 palavra_secreta = 'perfume'
 
 # Essa variavel irá armzenar as letras que o usuário aceta
-letrada_acertas = ''
+letras_acertadas = ''
 
 while True:
-    letrada_digitada = input('Digite uma letra: ')
+    letra_digitada = input('Digite uma letra: ')
 
     # condição criada para digitar apenas uma letra
-    if len(letrada_digitada) > 1: 
+    if len(letra_digitada) > 1: 
         print('Digite apenas uma letra: ')
         continue
     
-    if letrada_digitada in palavra_secreta:
-        letrada_acertas += letrada_digitada
+    # Verifica se letra_digitada está na palavra_secreta
+    if letra_digitada in palavra_secreta:
+        # atribuia a variavel letra_acertadas cada letra que o usuario acerta
+        letras_acertadas += letra_digitada
 
