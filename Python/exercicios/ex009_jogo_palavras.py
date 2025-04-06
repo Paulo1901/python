@@ -30,6 +30,18 @@ while True:
     
     # Verifica se letra_digitada está na palavra_secreta
     if letra_digitada in palavra_secreta:
-        # atribuia a variavel letra_acertadas cada letra que o usuario acerta
+        # atribuia a variavel letra_acertadas cada letra que o usuario acertar
         letras_acertadas += letra_digitada
+    
 
+    # essa variável é responsavel pela formatação da saído do programa
+    palavra_formada = ''
+    
+    # Cria a lógica de verificar cada letra acerteza pelo usuário
+    for letra_secreta in palavra_secreta: # iterando na variavel
+        if letra_secreta in letras_acertadas: # checando o valor
+            palavra_formada += letra_secreta
+        else:
+            palavra_formada += '*'
+    
+    print(palavra_formada)
