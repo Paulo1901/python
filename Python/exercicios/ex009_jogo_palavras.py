@@ -20,8 +20,12 @@ palavra_secreta = 'perfume'
 # Essa variavel irá armzenar as letras que o usuário aceta
 letras_acertadas = ''
 
+# Variável que conta o números de tentativas do usuario
+numeros_tentativas = 0 
+
 while True:
     letra_digitada = input('Digite uma letra: ')
+    numeros_tentativas += 1
 
     # condição criada para digitar apenas uma letra
     if len(letra_digitada) > 1: 
@@ -43,5 +47,13 @@ while True:
             palavra_formada += letra_secreta
         else:
             palavra_formada += '*'
+
+    print(f'Palavra formada: {palavra_formada}')
     
-    print(palavra_formada)
+    if palavra_formada == palavra_secreta:
+        print('VOCÊ GANHOU! PARABÉMS!')
+        print(f'A palvra era: {palavra_secreta}')
+        print(f'Você Tentou: {numeros_tentativas}x')
+        letras_acertadas = ''
+        numeros_tentativas = 0 
+        
