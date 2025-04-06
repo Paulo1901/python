@@ -20,5 +20,12 @@ string = 'ABCDE' # 5 caracteres (len)
 # print(bool(lista)) # Listas vazia é falsy
 
 # Listas são de tupo mutável, podendo ser mutável
+
+#        0    1      2       3     4
+#       -5   -4     -3      -2    -1
 lista = [123, True, 'Paulo', 1.2, [456, 'Andreia']]
-print(lista[0])
+print(lista[2], type(lista[2])) # checando o tio de dado de dentro da lista
+
+# modicando a lista
+lista[-3] = 'Davi' # atribuindo outro valor dentro da lista
+print(lista)
