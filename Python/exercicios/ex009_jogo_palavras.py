@@ -14,11 +14,20 @@ em palavra secreta.
 Faça a contagem de tentativas do seu usuário
 """
 
+# Palavra que usuário precisda adivinhar '???'
+palavra_secreta = 'perfume'
+
+# Essa variavel irá armzenar as letras que o usuário aceta
+letrada_acertas = ''
+
 while True:
     letrada_digitada = input('Digite uma letra: ')
 
     # condição criada para digitar apenas uma letra
-    if len(letrada_digitada) > 1:
+    if len(letrada_digitada) > 1: 
         print('Digite apenas uma letra: ')
         continue
     
+    if letrada_digitada in palavra_secreta:
+        letrada_acertas += letrada_digitada
+
