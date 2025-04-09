@@ -20,6 +20,12 @@ while True:
     elif opcao == 'a':
         print('a')
     elif opcao == 'l':
-        print('l')
+        os.system('cls')
+
+        if len(lista) == 0:
+            print('Nada para listar')
+        
+        for i, valor in enumerate(lista):
+            print(i, valor)
     else:
         print('Por favor escolha i, a ou l')
