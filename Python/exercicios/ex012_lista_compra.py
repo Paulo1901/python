@@ -18,7 +18,16 @@ while True:
         valor = input('Valor: ') # solicitando ao usuario o valor
         lista.append(valor) # atrinbuindo um valor a lista
     elif opcao == 'a':
-        print('a')
+        indice_str = input('Qual indice você quer apagar? ')
+        try:
+            indice = int(indice_str)
+            del lista[indice]
+        except ValueError:
+            print('Por favor digite números inteiros. ')
+        except IndexError:
+            print('[indice nao existe na lista. ]')
+        except Exception:
+            print('Erro desconhecido')
     elif opcao == 'l':
         os.system('cls')
 
