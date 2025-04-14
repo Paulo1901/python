@@ -23,7 +23,10 @@ contrario disso:
 
 o primeiro digito do CPF é 7
 """
-cpf_enviado_usuario = '39232116863'
+cpf_enviado_usuario = '392.321.168-63'\
+    .replace('.','')\
+    .replace('-','')\
+    .replace(' ','')
 nove_digito = cpf_enviado_usuario[:9] # pegando os numeros primeiros digitos do cpf
 
 # criando um contador regressivo
