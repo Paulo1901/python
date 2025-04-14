@@ -23,10 +23,20 @@ contrario disso:
 
 o primeiro digito do CPF é 7
 """
-cpf_enviado_usuario = '392.321.168-63'\
-    .replace('.','')\
-    .replace('-','')\
-    .replace(' ','')
+import re
+
+# cpf_enviado_usuario = '392.321.168-63'\
+#     .replace('.','')\
+#     .replace('-','')\
+#     .replace(' ','')
+
+# expressão regular para tratar a string
+entrada = input('CPF [746.824.890-70]: ')
+cpf_enviado_usuario = re.sub(
+    r'[^0-9]',
+    '',
+    entrada
+    )
 nove_digito = cpf_enviado_usuario[:9] # pegando os numeros primeiros digitos do cpf
 
 # criando um contador regressivo
