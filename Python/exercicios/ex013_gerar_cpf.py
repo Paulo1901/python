@@ -24,6 +24,7 @@ contrario disso:
 o primeiro digito do CPF é 7
 """
 import re
+import sys
 
 # cpf_enviado_usuario = '392.321.168-63'\
 #     .replace('.','')\
@@ -37,8 +38,14 @@ cpf_enviado_usuario = re.sub(
     '',
     entrada
     )
-nove_digito = cpf_enviado_usuario[:9] # pegando os numeros primeiros digitos do cpf
 
+entrada_e_sequencial = entrada == entrada[0] * len(entrada)
+
+if entrada_e_sequencial:
+    print('Você enviou dados repetidos.')
+    sys.exit()
+
+nove_digito = cpf_enviado_usuario[:9] # pegando os numeros primeiros digitos do cpf
 # criando um contador regressivo
 contador_regressivo_1 = 10
 
