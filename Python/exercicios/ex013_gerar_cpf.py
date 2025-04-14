@@ -23,29 +23,13 @@ contrario disso:
 
 o primeiro digito do CPF é 7
 """
-import re
+import random
 import sys
 
-# cpf_enviado_usuario = '392.321.168-63'\
-#     .replace('.','')\
-#     .replace('-','')\
-#     .replace(' ','')
+nove_digito = ''
+for i in range(9):
+    nove_digito += str(random.randint(0, 9))
 
-# expressão regular para tratar a string
-entrada = input('CPF [746.824.890-70]: ')
-cpf_enviado_usuario = re.sub(
-    r'[^0-9]',
-    '',
-    entrada
-    )
-
-entrada_e_sequencial = entrada == entrada[0] * len(entrada)
-
-if entrada_e_sequencial:
-    print('Você enviou dados repetidos.')
-    sys.exit()
-
-nove_digito = cpf_enviado_usuario[:9] # pegando os numeros primeiros digitos do cpf
 # criando um contador regressivo
 contador_regressivo_1 = 10
 
@@ -68,7 +52,4 @@ digito_2 = digito_2 if digito_2 <= 9 else 0
 
 cpf_gerado_pelo_calculo = f'{nove_digito}{digito_1}{digito_2}'
 
-if cpf_enviado_usuario == cpf_gerado_pelo_calculo:
-    print(f'{cpf_enviado_usuario} é válido.')
-else:
-    print('CPF inválido')
+print(cpf_gerado_pelo_calculo)
