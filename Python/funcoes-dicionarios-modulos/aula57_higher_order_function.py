@@ -7,11 +7,10 @@ def greeting(msg):
 	return f'{msg}, {name}'
 
 
-def execute(function, msg):
-	return function(msg)
+def execute(function, *args):
+	return function(*args)
 
-v = execute(greeting, 'Good morning')
-print(v)
+print(execute(greeting, 'Good morning', 'Paulo'))
 
 # value = greeting('Bom dia!')
 # print(value)
