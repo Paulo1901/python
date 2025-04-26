@@ -3,8 +3,8 @@ Higher Order Functions
 funções de primeira classe
 """
 
-def greeting(msg):
-	return f'{msg}, {name}'
+def greeting(msg, name):
+	return f'{msg} {name}'
 
 
 def execute(function, *args):
